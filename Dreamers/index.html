@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+    <!--Meta Data-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rowan Craik</title>
+    
+    <!--External Scripts-->
+    <!--CSS-->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    
+    <!--Javascript-->
+    <script src="../FudgeCore/FudgeCore.js"></script>
+    <script src="../FudgeAid/FudgeAid.js"></script>
+
+    <script src="main.js"></script>
+    <script src="player.js"></script>
+    <script src="bullet.js"></script>
+    <script src="enemy.js"></script>
+    <script src="bigEnemy.js"></script>
+    <script src="mediumEnemy.js"></script>
+    <script src="smallEnemy.js"></script>
+    <script src="boss.js"></script>
+    <script src="map.js"></script>
+    <script src="enemySpawnController.js"></script>
+
+</head>
+<!--Webpage content-->
+<body>
+    <!--All webpage content is formatted into a CSS grid-->
+    <div class="grid-container">
+        <!--The difficulty options-->
+        <div class="grid-item" id="item1">
+            <h3 id="difficulty">Difficulty: </h3>
+            <button type="button" id="easy">Easy</button>
+            <button type="button" id="medium">Medium</button>
+            <button type="button" id="hard">Hard</button>
+        </div>
+        <!--The game logo-->
+        <div class="grid-item" id="item2">
+            <img id="logo" src="logo.png" alt="Something went wrong with this image">  
+        </div>
+        <!--The game info-->
+        <div class="grid-item" id="item3">
+            <h2 id="points"></h2>
+            <h2 id="health" style="color: white"></h2>
+            <h2 id="wave" style="color: white">Wave: 1</h2>
+            <h2 id="enemies-rem">Enemies Remaining: </h2>
+            <button type="button" onclick="location.reload()">Reset game</button>
+            <br><br>
+            <button type="button" id="prev-wave">Last Wave</button>
+            <button type="button" id="next-wave">Next Wave</button>
+            <div id="game-over" style="opacity: 0;">
+                <h1 id="game-over-message"></h1>
+            </div>
+        </div>
+        <!--The game instructions-->
+        <div class="grid-item" id="item4">
+            <h3 id="instructions">Instructions:</h3>
+            <h4>Move with 'w', 'a', 's', 'd'.<br>
+                Shoot with 'left mouse'.<br>
+                Avoid enemies or else you lose health.<br>
+                5 Health is rewarded at the end of every wave.<br>
+                Survive 5 waves of enemies to win!<br>
+                Note: Health will not be given for skipping waves</h4>
+        </div>
+        <!--The canvas/playspace-->
+        <div class="grid-item" id="item5">
+            <canvas></canvas>
+        </div>
+      </div>
+</body>
+</html>
